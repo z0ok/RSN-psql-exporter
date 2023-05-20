@@ -7,4 +7,6 @@ https://github.com/prometheus-community/postgres_exporter/releases/download/v0.1
 
 https://habr.com/ru/articles/480902/
 
+https://mcs.mail.ru/docs/additionals/cases/cases-monitoring/case-psql-exporter#
+
 ExampleDB https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
