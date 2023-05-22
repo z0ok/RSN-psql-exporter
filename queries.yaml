@@ -1,0 +1,18 @@
+pg_statio_user_tables:
+  query: "SELECT current_database() as datname, schemaname, relname, heap_blks_read, heap_blks_hit FROM pg_statio_user_tables"
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Name of database"
+    - schemaname:
+        usage: "LABEL"
+        description: "Name of the schema that this table is in"
+    - relname:
+        usage: "LABEL"
+        description: "Name of this table"
+    - heap_blks_read:
+        usage: "COUNTER"
+        description: "Number of disk blocks read from this table"
+    - heap_blks_hit:
+        usage: "COUNTER"
+        description: "Number of buffer hits in this table"
