@@ -13,10 +13,9 @@ https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-
 
 https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
 
-
-''' 
+```
 CREATE ROLE psql_exporter WITH LOGIN PASSWORD 'secret';
 ALTER ROLE psql_exporter CONNECTION LIMIT 3;
 GRANT pg_monitor TO psql_exporter;   -- system role available for v10+ servers to reduce superuser usage
 GRANT CONNECT ON DATABASE mydb TO psql_exporter;
-'''
+```
