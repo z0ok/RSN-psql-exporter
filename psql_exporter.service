@@ -1,0 +1,15 @@
+[Unit]
+Description=PSQL Exporter
+After=network.target
+
+[Service]
+User=psql_exporter
+Group=psql_exporter
+Type=simple
+Restart=always
+ExecStart=/opt/psql_exporter/psql_exporter \
+--config.file /opt/psql_exporter/.psql_export.cnf \
+--web.listen-address=0.0.0.0:9204
+
+[Install]
+WantedBy=multi-user.target

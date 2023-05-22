@@ -4,7 +4,7 @@ else
     echo '[-] Creating user'
     useradd -rs /bin/false psql_exporter
 fi
-cp ./node_exporter.service /etc/systemd/system/
+cp ./psql_exporter.service /etc/systemd/system/
 systemctl daemon-reload
 sleep 1
 systemctl enable psql_exporter
