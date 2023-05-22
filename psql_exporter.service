@@ -8,7 +8,7 @@ Group=psql_exporter
 Type=simple
 Restart=always
 ExecStart=/opt/psql_exporter/psql_exporter \
---config.file /opt/psql_exporter/.psql_export.cnf \
+--config.file /opt/psql_exporter/postgres_exporter.yaml \
 --web.listen-address=0.0.0.0:9204 \
 --disable-default-metrics \
 --disable-settings-metrics \
