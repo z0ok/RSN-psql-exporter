@@ -7,14 +7,13 @@ User=psql_exporter
 Group=psql_exporter
 Type=simple
 Restart=always
-EnvironmentFile=/opt/psql_exporter/psql_exporter.env
+EnvironmentFile=/opt/psql_exporter/psql_exporter_env.yaml
 ExecStart=/opt/psql_exporter/psql_exporter \
---config.file /opt/psql_exporter/postgres_exporter.yaml \
+--config.file /opt/psql_exporter/psql_exporter_conf.yaml \
 --web.listen-address=0.0.0.0:9204 \
 --disable-default-metrics \
 --disable-settings-metrics \
 --auto-discover-databases \
---log.format=logger:stdout \
 --extend.query-path=/opt/psql_exporter/queries.yaml
 
 
