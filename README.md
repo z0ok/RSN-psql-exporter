@@ -9,4 +9,6 @@ https://habr.com/ru/articles/480902/
 
 https://mcs.mail.ru/docs/additionals/cases/cases-monitoring/case-psql-exporter#
 
-ExampleDB https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
+https://www.postgresqltutorial.com/postgresql-getting-started/postgresql-sample-database/
+
+https://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
