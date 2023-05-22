@@ -1,1 +1,1 @@
-DATA_SOURCE_NAME="postgresql://postgres@:5432/postgres?host=/var/run/postgresql/&sslmode=disable"
+DATA_SOURCE_NAME="postgresql://LOGIN:PASSWORD@127.0.0.1:5432/DB_NAME?sslmode=disable"
