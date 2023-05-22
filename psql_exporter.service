@@ -9,7 +9,13 @@ Type=simple
 Restart=always
 ExecStart=/opt/psql_exporter/psql_exporter \
 --config.file /opt/psql_exporter/.psql_export.cnf \
---web.listen-address=0.0.0.0:9204
+--web.listen-address=0.0.0.0:9204 \
+--disable-default-metrics \
+--disable-settings-metrics \
+--auto-discover-databases \
+--log.format=logger:stdout \
+--extend.query-path=/opt/psql_exporter/queries.yaml
+
 
 [Install]
 WantedBy=multi-user.target
