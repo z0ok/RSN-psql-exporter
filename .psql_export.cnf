@@ -1,7 +1,0 @@
-auth_modules:
-    db1:
-        type: userpass
-            username: admin
-            password: admin
-        options:
-            sslmode: disable
