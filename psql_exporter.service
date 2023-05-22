@@ -12,7 +12,6 @@ ExecStart=/opt/psql_exporter/psql_exporter \
 --web.listen-address=0.0.0.0:9204 \
 --disable-default-metrics \
 --disable-settings-metrics \
---auto-discover-databases \
 --extend.query-path=/opt/psql_exporter/queries.yaml
 
 
