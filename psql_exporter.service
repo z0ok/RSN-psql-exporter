@@ -7,6 +7,7 @@ User=psql_exporter
 Group=psql_exporter
 Type=simple
 Restart=always
+EnvironmentFile=/opt/psql_exporter/psql_exporter.env
 ExecStart=/opt/psql_exporter/psql_exporter \
 --config.file /opt/psql_exporter/postgres_exporter.yaml \
 --web.listen-address=0.0.0.0:9204 \
