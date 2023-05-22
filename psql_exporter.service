@@ -9,7 +9,6 @@ Type=simple
 Restart=always
 EnvironmentFile=/opt/psql_exporter/psql_exporter_env.yaml
 ExecStart=/opt/psql_exporter/psql_exporter \
---config.file /opt/psql_exporter/psql_exporter_conf.yaml \
 --web.listen-address=0.0.0.0:9204 \
 --disable-default-metrics \
 --disable-settings-metrics \
