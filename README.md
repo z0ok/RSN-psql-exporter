@@ -38,4 +38,20 @@ GRANT SELECT ON ALL TABLES IN SCHEMA public TO psql_backup;
 GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO psql_backup;
 ```
 
+Backup cron:
+```
+### Setting up
+PG_HOST="127.0.0.1"
+PG_USER="USER"
+PG_DB="DB"
+PG_TABLE="TABLE"
+PG_SCHEMA="SCHEMA"
+CURR_DATE=$(date +\%Y-\%m-\%d-\%H-\%M);
+BCKP_DIR="/opt/backups";
 
+### Creating PATH for backups with current time-date;
+mkdir -p $BCKP_DIR/$CURR_DATE;
+pg_dump "postgres://$PG_USER:@$PG_HOST:5432/$PG_DB" --table="$PG_SCHEMA"."$PG_TABLE" > $BCKP_DIR/$CURR_DATE/$PG_TABLE.dump
+tar -tczf $BCKP_DIR/$CURR_DATE.tar.gz #BCKP_DIR/$CURR_DATE/$PG_TABLE.dump
+#rm -r $BCKP_DIR/$CURR_DATE
+```
