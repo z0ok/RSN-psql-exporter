@@ -21,6 +21,21 @@ GRANT CONNECT ON DATABASE mydb TO psql_exporter;
 ```
 
 # Backup
+К одной таблице:
+
 ```
-grant usage,select on all sequences in schema public to psql_epoxrter
+CREATE USER psql_backup WITH PASSWORD 'YOUTPASSWORDHERE' LOGIN;
+GRANT CONNECT ON DATABASE "DATABASENAME" to psql_backup;
+GRANT SELECT ON schema.table TO psql_backup;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO psql_backup;
 ```
+
+На все таблицы:
+```
+CREATE USER psql_backup WITH PASSWORD 'YOUTPASSWORDHERE' LOGIN;
+GRANT CONNECT ON DATABASE "DATABASENAME" to psql_backup;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO psql_backup;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA public TO psql_backup;
+```
+
+
