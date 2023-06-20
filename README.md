@@ -19,3 +19,8 @@ ALTER ROLE psql_exporter CONNECTION LIMIT 3;
 GRANT pg_monitor TO psql_exporter;   -- system role available for v10+ servers to reduce superuser usage
 GRANT CONNECT ON DATABASE mydb TO psql_exporter;
 ```
+
+# Backup
+```
+grant usage,select on all sequences in schema public to psql_epoxrter
+```
